@@ -1,0 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Merriweather', serif;
+    background-color: #ebf2ff;
+    overflow-x: hidden;
+    transition: 0.5s;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+section {
+    margin: 4rem 0;
+}
+
+.navbar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9fafc;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+}
+
+.navbar-brand {
+    width: 100px;
+}
+
+.brand-logo {
+    width: 100%;
+}
+
+.navbar-nav-items {
+    display: flex;
+}
+
+.button-primary {
+    background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);
+    margin: 10px;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    text-transform: capitalize;
+    transition: .5s;
+    font-weight: 600;
+    background-size: 200% auto;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 0 20px #eee;
+    display: block;
+}
+
+.button-primary:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+}
+
+.hero-image-container {
+    position: relative;
+    width: 100%;
+}
+
+.hero-image {
+    position: absolute;
+    width: 100%;
+    right: auto;
+    left: auto;
+    z-index: 2;
+    border-radius: 6px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.hero-image-shape {
+    position: absolute;
+    right: 2;
+}
+
+.hero-describtion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-text {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    color: #1d3557;
+    font-weight: 900;
+}
+
+.video-footage-container {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.video-footage {
+    position: relative;
+}
+
+.video-footage::before {
+    background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);   
+    content: "";
+    top: 0;
+    left: 0;
+    position: absolute;
+    transform: translate(1rem, 1rem);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.video-footage-text {
+    margin-top: 2rem;
+    color: #1d3557;
+    font-size: 1.25rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+.food-list-continer {
+    position: relative;
+    margin:5rem 0;
+}
+
+
+.food-menu-card-list {
+    width: 100%;
+}
+
+.food-menu-card-image {
+    border-radius: 6px 6px 0 0;
+    width: 100%;
+}
+
+.food-menu-card-details {
+    padding: 1rem;
+    text-align: left;
+    color: #1d3557;
+}
+
+.food-menu-card-title {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    color: #1d3557;
+    font-weight: 900;
+}
+
+.restaurant-list-container {
+    margin-top: 3rem;
+}
+
+.restaurant-list-text {
+    margin: 1rem 0;
+}
+
+.restaurant-list-row-1 {
+    display: flex;
+    align-items: baseline;
+}
+
+.restaurant-list-row-2 {
+    margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row-reverse;
+}
+
+.restaurant1, .restaurant3 {
+    border-radius: 4px;
+    margin: 0 5px;
+    width: 150px;
+    height: 80px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.restaurant2, .restaurant4 {
+    border-radius: 4px;
+    margin: 0 5px;
+    width: 200px;
+    height: 100px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.text-x1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    color: rgb(29, 53, 87);
+    font-weight: 900;
+    text-align: center;
+}
+
+.btn-view-more {
+    color: rgb(225, 225, 225);
+    margin: 2rem 0;
+    transition: all .3s ease-in-out 0s;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.btn-view-more:hover {
+    background-color: white;
+    color: #dd2476;
+    width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.updates-input-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-input-field {
+    background-color: rgb(252, 237, 240);
+    color: rgb(29, 53, 87);
+    font-weight: 700;
+    border: 1px solid rgb(238, 137, 160);
+    border-image: initial;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.restaurant-image-container {
+    position: relative;
+    margin-top: 4rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    border-radius: 13px;
+    background: url(https://images.unsplash.com/photo-1522336572468-97b06e8ef143?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=755&q=80) center center / cover no-repeat;
+}
+
+.background-image-overly {
+    position: absolute;
+    height: 200px;
+    width: 100%;
+    background-color: rgb(10, 64, 101);
+    opacity: 0.49;
+    border-radius: 13px;
+}
+
+.quote-text {
+    color: rgb(255, 255, 255);
+    z-index: 3;
+    text-align: center;
+    margin: 0px 1rem;
+}
+
+.footer-container {
+    background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    width: 300px;
+    filter: brightness(0) invert(1);
+}
+
+
+@media (min-width: 768px) {
+    .hero-image {
+        margin-top: 2rem;
+    }
+    .hero-container {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+    .hero-image {
+        margin-top: 2rem;
+    }
+    .video-footage-text {
+        margin-left: 2rem;
+    }
+    .video-footage {
+        margin-right: 2rem;
+    }
+    .food-list-continer {
+        position: relative;
+        margin: 5rem 0;
+    }
+    .food-menu-card-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 2rem;
+    }
+    .food-menu-card {
+        flex-basis: 30%;
+        background-color: #fff;
+        border-radius: 6px;
+    }
+    .food-menu-card-move-up {
+        margin-top: -1rem;
+        margin-bottom: 1rem;
+    }
+    .food-menu-container-diagonal {
+        left: 0;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        transform: skewY(-5deg);
+        background-image: linear-gradient(to right, #ff512f 0%, #dd2476 51%, #ff512f 100%);   
+        z-index: -3;
+    }
+    .restaurant-list-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .restaurant-list-row-1 {
+        justify-content: center;
+    }
+    .restaurant-list-row-2 {
+        margin-top: 3px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .text-x1 {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+    }
+    .restaurant1, .restaurant3 {
+        width: 200px;
+        height: 100px;
+    }
+    
+    .restaurant2, .restaurant4 {
+        width: 250px;
+        height: 120px;
+    }
+    .email-input-field {
+        width: 15rem;
+    }
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1140px;
+    }
+    .navbar {
+        padding: 0 3rem;
+    }
+    .button-primary {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    .hero-text {
+        font-size: 3rem;
+        line-height: 1;
+    }
+    .video-footage-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .video-footage-text {
+        width: 60%;
+    }
+    .food-menu-card-list {
+        margin-top: 2rem;
+    }
+    .restaurant1, .restaurant3 {
+        width: 250px;
+        height: 120px;
+    }
+    
+    .restaurant2, .restaurant4 {
+        width: 300px;
+        height: 140px;
+    }
+    .email-input-field {
+        width: 20rem;
+    }
+}
